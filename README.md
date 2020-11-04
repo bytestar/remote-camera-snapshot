@@ -46,16 +46,9 @@ const HOST = '<YOUR HOST>';
 ```
 node camera_client.js
 ```
-Finally,
-Open you web browser and goes to http://<host_ip>:<8080>/
+Finally,<br/>
+Open you web browser and goes to http://<host_ip>:<8080>/<br/>
 Done.
-
-
-## Get Start
-The working flow as below
-```
-camera preview data(YV12) -> YUV420sp -> MediaCodec -> H.264 data -> UDP 
-```
  
 
 ## License
@@ -63,5 +56,3 @@ camera preview data(YV12) -> YUV420sp -> MediaCodec -> H.264 data -> UDP
 Copyright (C) 2015 Ping-Chun Tseng <lucas.pctseng@gmail.com> 
 Licensed under Apache 2.0
 ```
-
-## Future works

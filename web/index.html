@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	.loader {
+	  border: 16px solid #f3f3f3; /* Light grey */
+	  border-top: 16px solid #3498db; /* Blue */
+	  border-radius: 50%;
+	  width: 24px;
+	  height: 24px;
+	  animation: spin 2s linear infinite;
+	}
+
+	@keyframes spin {
+	  0% { transform: rotate(0deg); }
+	  100% { transform: rotate(360deg); }
+	}
+
+	input[type=button] {
+	  background-color: #4CAF50;
+	  border: none;
+	  color: white;
+	  padding: 16px 32px;
+	  text-decoration: none;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	}
+</style>
+
+<script type="text/javascript">
+	function reloadSnapshot() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "reload", false);
+		xhttp.send();
+		if (xhttp.status != 200) {
+			setTimeout(reloadSnapshot, 1000);
+			return;
+		}
+		document.getElementById('snap-img').src = "snap.jpg?random="+new Date().getTime();
+		document.getElementById('progressbar').style.display = 'none';
+		document.getElementById('snap-btn').style.display = 'block';
+	}
+
+	function snapshot() {
+		document.getElementById('progressbar').style.display = 'block';
+		document.getElementById('snap-btn').style.display = 'none';
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				setTimeout(reloadSnapshot, 1000);
+			}
+		};
+		xhttp.open("GET", "snapshot", true);
+		xhttp.send();
+	}
+</script>
+<body>
+	<h1>Remote Camera Snapshot</h1>
+	<img id="snap-img" src="snap.jpg" style="max-width:100%;height:auto;"/><br/>
+	<input id="snap-btn" type="button" value="Snapshot" onclick="snapshot()" />
+	<div id="progressbar" class="loader" style="display: none"></div>
+</body>
+</html>

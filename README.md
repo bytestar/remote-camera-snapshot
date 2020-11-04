@@ -1,4 +1,4 @@
-# remote-camera-snapshot
+# Remote Camera Snapshot
 
 ## What it does
 This project is going to demonstrate how to use a Raspberry Pi, a webcam and an internet server
@@ -11,9 +11,11 @@ You can take a snapshot from webcam in your house or office through the web brow
 
 ## Requirement
 - Internet server
-> If you want to access everywhere then you need a public IP or you can only access in local netowork
+> If you want to access everywhere then you need a public IP or you can only access in local netowork.
 - Raspberry Pi
 - USB Webcam or RPi camera
+- Software tools
+> Node.js, Python, HTML and Javascript.
 
 
 ## How to use

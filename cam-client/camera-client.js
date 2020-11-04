@@ -6,7 +6,7 @@ const fs = require('fs');
 
 const PORT = 18080; // web server tcp port
 const WEB_PORT = 8080;
-const HOST = '192.168.1.66';
+const HOST = '<YOUR HOST>';
 const KEEP_ALIVE_TIME = 15 * 60 * 1000;
 
 var client = new net.Socket();

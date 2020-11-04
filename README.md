@@ -25,6 +25,7 @@ sudo apt install npm
 ```
 2. Install formidable module
 ```
+cd remote-camera-snapshot/web
 npm install formidable
 ```
 3. Run camera_server.js
@@ -44,6 +45,7 @@ const HOST = '<YOUR HOST>';
 ```
 3. Run camera_client.js
 ```
+cd remote-camera-snapshot/cam-client
 node camera_client.js
 ```
 Finally,<br/>

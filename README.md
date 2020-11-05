@@ -6,7 +6,8 @@ with around 100 lines code to build a simple home surveillance system.
 
 
 ## What you can do
-You can take a snapshot from webcam in your house or office through the web browser.<br/>
+You can take a snapshot from webcam in your house or office through the web browser (even in your mobile phone).<br/><br/>
+
 ![image](https://github.com/bytestar/remote-camera-snapshot/blob/main/rcs_demo.jpg)
 
 ## Requirement
